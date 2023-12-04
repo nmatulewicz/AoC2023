@@ -1,1 +1,4 @@
 .idea
+.vs
+venv
+**/__pycache__
