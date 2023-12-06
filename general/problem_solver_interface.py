@@ -14,18 +14,18 @@ class IProblemSolver(ABC):
             self.input_file_name = smaller_input_file_name
         else:
             self.input_file_name = input_file_name
+        self.lines = read_lines(self.input_file_name)
 
     def solve(self):
-        lines = read_lines(self.input_file_name)
         return {
-            "solution_part_1": self.solve_part_1(lines),
-            "solution_part_2": self.solve_part_2(lines),
+            "solution_part_1": self.solve_part_1(),
+            "solution_part_2": self.solve_part_2(),
         }
 
     @abstractmethod
-    def solve_part_1(self, lines: List[str]):
+    def solve_part_1(self):
         pass
 
     @abstractmethod
-    def solve_part_2(self, lines: List[str]):
+    def solve_part_2(self):
         pass
