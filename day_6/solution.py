@@ -2,6 +2,7 @@ from typing import List
 
 from general.problem_solver_interface import IProblemSolver
 
+
 class ProblemSolver(IProblemSolver):
 
     def solve_part_1(self, lines: List[str]):
