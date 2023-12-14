@@ -5,10 +5,10 @@ from general.problem_solver_interface import IProblemSolver
 
 class ProblemSolver(IProblemSolver):
 
-    def solve_part_1(self, lines: List[str]):
+    def solve_part_1(self):
         pass
 
-    def solve_part_2(self, lines: List[str]):
+    def solve_part_2(self):
         pass
 
 
