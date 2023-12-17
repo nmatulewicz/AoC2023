@@ -1,5 +1,7 @@
 from typing import List
 
+import numpy as np
+
 
 def read_lines(file_name: str) -> List[str]:
     file = open(file_name, "r")
@@ -22,3 +24,11 @@ def try_parse_int(value):
         return int(value), True
     except ValueError:
         return value, False
+
+
+def lines_to_array(lines: List[str]) -> np.ndarray:
+    return np.array([[char for char in line] for line in lines], str)
+
+
+def lines_to_int_array(lines: List[str]) -> np.ndarray:
+    return np.array([[char for char in line] for line in lines], int)
